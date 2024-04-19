@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="Imagenes/ico.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+   <link rel="stylesheet" href="estilo.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-O2rZrF+/KaXBrCjKz0IfgMw4e4x72drrMaF6cpGjhBkwZS6/d+z9X3qV7jKk3yihV7gzngEftQfI7RvRjOcV7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+    
+    <br><br><br>
+    <div class="box">
+      <div id="logo4">
+      <h1 id="logo0">V</h1><h1 id="logo2">A</h1><h1 id="logo1">T</h1>
+    </div>
+      <form action="registro.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br><br>
+        
+        <label for="contrasena">Contrasena:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br><br>
+        
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required><br>
+        
+        <input id="registrarse" type="submit" value="Registrarse"> 
+       <br>
+        <div class="bottom">
+         
+          <label id="ret-ini"><a href="pg3-1.html">Volver al inicio</a></label>
+          </div>
+         <br>
+            <label id="con-olv"><a href="rec-con.html">Olvidaste tu contraseña?</a></label> 
+          
+          <button id="iniciar-sesion" onclick="window.location.href='login.php'">¿Tienes una cuenta? Inicia Sesión aquí</button>
+        
+       
+      </div>
+    
+
+ 
+        
+        </div>
+        <br><br><br>
+        
+      </form>
+</div>
+    <script>
+      function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var toggleIcon = document.getElementById("togglePassword");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleIcon.classList.remove("fa-eye-slash");
+          toggleIcon.classList.add("fa-eye");
+        } else {
+          passwordInput.type = "password";
+          toggleIcon.classList.remove("fa-eye");
+          toggleIcon.classList.add("fa-eye-slash");
+        }
+      }
+    </script>
+   </body>
+</html>
+

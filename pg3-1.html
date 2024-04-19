@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href=".\IconVAT.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="estilos-1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <title>Página de Psicología</title>
+</head><section id="animation">
+    <div id="logo">
+      <img src=".\LogoVAT.png" alt="Logo de VAT">
+      <h1>VAT</h1>
+    </div>
+  </section>
+<body>
+
+  
+  <script>window.onload = function() {
+    setTimeout(function() {
+      document.getElementById("animation").style.display = "none";
+    }, 2000); // cambia el valor "1000" por la duración de tu animación en milisegundos
+  };
+  </script>
+
+<div class="notification">
+      <span class="close-btn">&times;</span>
+      <p>Hola, esta página solo es de información, si lo que buscas es apoyo da click en el siguiente botón</p>
+     <a href="API.html"><button class="buscar-btn">Apoyo</button></a> 
+    </div>
+      <script>document.addEventListener("DOMContentLoaded", function() {
+        var notification = document.querySelector(".notification");
+        var closeBtn = document.querySelector(".close-btn");
+      
+        closeBtn.addEventListener("click", function() {
+          notification.style.display = "none";
+        }); 
+      });
+      </script>
+      
+   <div class="menu">
+  
+      <img class="logoi" src="./Imagenes/logo.jfif" alt=""><h2 class="logo0">V</h2><span>A</span><h2 class="logo1">T</h2>
+      <ul>
+        <li><a href="pg3-1.html">Inicio</a></li>
+        <li>
+            <a href="proble.html">Problemas <i class="fas fa-caret-down"></i> </a>
+            <div class="tpm_menu">
+                <ul>
+                  <a href="proble.html #bullying">Bullying</a>
+                  <a href="proble.html #trastornos-alimenticios">Trastornos alimenticios</a>
+                  <a href="proble.html #drogas">Drogas</a><br>
+                  <a href="proble.html #ansiedad">Ansiedad</a><br>
+                  <a href="proble.html #estres">Estrés</a> <br>
+                  <a href="proble.html #presion-escolar">Presión escolar</a> <br>
+                  <a href="proble.html #problemas-familiares">Problemas familiares</a>
+                </ul>
+            </div>
+        </li>
+        <li><a href="API.html">Atención Psicologica</a></li>
+        <li><a href="gracias.html">Empresas Relaciónadas</a></li>
+        <li><a href="g-e.html">Contenido Multimedia</a></li>
+        <li><a href="#" id="contact-link">Contactanos</a>
+              </li>
+      </ul>
+  
+
+      <div id="contact-container" class="hidden">
+        <div id="contact-box">
+          <span class="close-button">&times;</span>
+          <form method="post" action="enviar_correo.php">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      
+      
+      <script>
+        const contactLink = document.querySelector('#contact-link');
+        const contactContainer = document.querySelector('#contact-container');
+      
+        contactLink.addEventListener('click', (event) => {
+          event.preventDefault();
+          contactContainer.classList.remove('hidden');
+        });
+      
+        const closeButton = document.createElement('span');
+        closeButton.classList.add('close-button');
+        closeButton.innerHTML = '&times;';
+        document.querySelector('#contact-box').appendChild(closeButton);
+      
+        closeButton.addEventListener('click', () => {
+          contactContainer.classList.add('hidden');
+        });
+      
+        const contactForm = document.querySelector('#contact-box form');
+      
+        contactForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const email = contactForm.elements.email.value;
+          const message = contactForm.elements.message.value;
+          const data = { email, message };
+      
+          fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log('Chingon pa:', data);
+              alert('Chingon pa');
+              contactContainer.classList.add('hidden');
+            })
+            .catch((error) => console.error('Error:', error));
+        });
+      </script>
+      
+      <style>
+       .close-button {
+position: absolute;
+top: 0;
+right: 0;
+padding: 0.5rem;
+font-size: 1.5rem;
+cursor: pointer;
+}
+#contact-box {
+position: relative;
+}
+
+
+      </style>
+      </div>
+
+   <a href="sign-in.html"><button type="button">Registrate</button></a>
+</div>
+</div>
+
+
+<div class="welcome">
+        <h1>Bienvenido a VAT</h1>
+        <p>Somos una organización dedicada a proporcionar apoyo emocional y psicológico a todos los estudiantes que lo necesiten. Nuestra misión es ayudar a las personas a mejorar su bienestar mental y emocional al igual que encontrar la fuerza interior para superar cualquier dificultad que puedan estar enfrentando.</p>
+       <br> <h3>"Existen dos maneras de ser feliz en esta vida, una es hacerse el idiota y la otra serlo" <br>-Sigmund Freud</h3>
+      </div>
+  
+    <div class="cards">
+        <div class="card card1">
+            <div class="container">
+                <img src=".\bullying.jpg" alt="bullying">
+            </div>
+            <div class="details">
+               <a href="proble.html"> <h3>El bullying es:</h3></a><br>
+                <p>El bullying, también conocido como acoso escolar, es un comportamiento agresivo e intencional que se produce repetidamente hacia una persona o grupo de personas en un contexto escolar o social. Este comportamiento puede ser físico, verbal o relacional y puede tener consecuencias negativas graves para la salud mental y física de la persona que lo sufre.</p>
+            </div>
+        </div>
+      
+        <div class="card card2">
+            <div class="container">
+                <img src=".\orientacion-sexual.png" alt="orientación sexual">
+            </div>
+            <div class="details">
+              <a href="os"><h3>La orientación sexual es:</h3></a><br>
+              <p>La orientación sexual es una dimensión de la sexualidad humana que se refiere al patrón de atracción romántica, sexual y emocional que una persona experimenta hacia otros individuos. Esta atracción puede ser hacia individuos del mismo sexo (homosexual), del sexo opuesto (heterosexual), de ambos sexos (bisexual), o hacia ningún género en particular (asexual).</p>
+           </div>
+        </div>
+
+        <div class="card card3">
+            <div class="container">
+                <img src=".\depre.jpg" alt="Depresión">
+            </div>
+            <div class="details">
+              <a href="d"><h3>La depresión es:</h3></a><br>
+              <p>La depresión es un trastorno del estado de ánimo que se caracteriza por una sensación persistente de tristeza, desesperanza y desesperación. Los síntomas de la depresión pueden incluir cambios en el apetito, el sueño, pérdida de energía, dificultad para concentrarse, irritabilidad, pérdida de interés en actividades que antes se disfrutaban y pensamientos recurrentes de muerte o suicidio.</p>
+          
+                </div>
+    </div>
+
+    <div class="card card4">
+      <div class="container">
+<img src=".\drogas.jpg" alt="adicción">
+</div>
+<div class="details">
+<a href="proble.html #drogas"><h3>Las adicciones son:</h3></a><br>
+<p>Desde una perspectiva psicológica, la adicción a drogas o sustancias se puede entender como un trastorno de la conducta que se caracteriza por el uso compulsivo y repetido de una sustancia, a pesar de los efectos negativos que tiene en la vida de la persona y en su salud física y psicológica.</p>
+</div>
+</div>
+      </div>
+      
+          
+           
+            
+       </section>
+
+     
+       <footer>
+        <div class="container2">
+            <div class="col-md-4">
+              <h4>Síguenos en redes sociales</h4>
+              <ul class="social-icons">
+                <li><a href="https://www.facebook.com/profile.php?id=100092694222286" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.instagram.com/vat_divipp/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <p class="text-muted text-center">© 2024 Todos los derechos reservados.</p>
+      
+      </footer>
+</body>
+</html> 

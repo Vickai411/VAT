@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href=".\IconVAT.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos2.css">
+  <link rel="stylesheet" href="calendes.css">
+  <title>Atención Psicologica</title>
+</head>
+<body>
+  <div class="menu">
+    <img class="logoi" src="./Imagenes/logo.jfif" alt=""><h2 class="logo0">V</h2><span>A</span><h2 class="logo1">T</h2>
+      <ul>
+        <li><a href="pg3-1.html">Inicio</a></li>
+        <li>
+            <a href="proble.html">Problemas <i class="fas fa-caret-down"></i> </a>
+            <div class="tpm_menu">
+                <ul>
+                  <a href="proble.html #bullying">Bullying</a>
+                  <a href="proble.html #trastornos-alimenticios">Trastornos alimenticios</a>
+                  <a href="proble.html #drogas">Drogas</a><br>
+                  <a href="proble.html #ansiedad">Ansiedad</a><br>
+                  <a href="proble.html #estres">Estrés</a> <br>
+                  <a href="proble.html #presion-escolar">Presión escolar</a> <br>
+                  <a href="proble.html #problemas-familiares">Problemas familiares</a>
+                </ul>
+            </div>
+        </li>
+        <li><a href="API.html">Atención Psicologica</a></li>
+        <li><a href="gracias.html">Empresas Relaciónadas</a></li>
+        <li><a href="g-e.html">Contenido Multimedia</a></li>
+        <li><a href="#" id="contact-link">Contactanos</a></li>
+      </ul>
+
+    <div id="contact-container" class="hidden">
+      <div id="contact-box">
+        <span class="close-button">&times;</span>
+        <form method="post" action="enviar_correo.php">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <a href="sign-in.html"><button type="button">Registrate</button></a>
+  </div>
+
+  <div class="contenido">
+    <div class="imagen-seccion">
+      <img src="doc.jpg" alt="Imagen">
+    </div>
+    <div class="texto-seccion">
+      <h3>PEDRO PABLO</h3>
+      <p>PEDRO PABLO</p>
+    </div>
+   
+    <div id="map">  
+      <script src="map.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    </div> 
+    <div class="mosd">
+      <button type="button" class="mos">Agendar Cita</button>
+    </div>
+  </div>
+
+  <div id=agendar class="oculto">
+
+    <div id="ctt"><h3 >Cita-Psicologica</h3></div>
+    
+
+    <div class="container">
+      <div class="left">
+        <div class="calendar">
+          <div class="month">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="date">Diciembre 2015</div>
+            <i class="fas fa-angle-right next"></i>
+          </div>
+          <div class="weekdays">
+            <div>Dom</div>
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mier</div>
+            <div>Jue</div>
+            <div>Vie</div>
+            <div>Sab</div>
+          </div>
+          <div class="days"></div>
+          <div class="goto-today">
+            <div class="goto">
+              <input type="text" placeholder="mm/yyyy" class="date-input" />
+              <button class="goto-btn">Ir</button>
+            </div>
+            <button class="today-btn">HOY</button>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="today-date">
+          <div class="event-day"><h3>Datos</h3></div>
+          <div class="event-date"><img id="agenda" src="agend.png" alt=""></div>
+        </div>
+        <form id="userDataForm">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required><br>
+        
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required><br> 
+        
+          <label for="age">Edad:</label>
+          <input type="number" id="age" name="age" required><br>
+        
+          <label for="gender">Sexo:</label>
+          <select id="gender" name="gender" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+          </select><br>
+        
+          <label for="birthdate">Fecha de Nacimiento:</label>
+          <input type="date" id="birthdate" name="birthdate" required><br>
+        
+          <label for="appointmentDate">Fecha de Cita:</label>
+          <input type="text" id="appointmentDate" name="appointmentDate" readonly required><br>
+        
+          <button type="button" onclick="addDataToList()">Agregar al Calendario</button>
+          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+          <button type="submit">Enviar por Correo</button>
+        </form>
+        
+      </div>
+    </div>
+    
+    <button id="mostrarCalendario">Mostrar Calendario</button>
+    
+    <script src="calend.js"></script>
+    
+
+    
+      
+
+  </div>
+
+</body>
+</html>

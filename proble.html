@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="Imagenes/Ico.ico">
+  <meta charset="UTF-8">
+  <link rel="icon" href=".\IconVAT.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="estilos-1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<title>Problemas</title>
+                            
+	
+</head>
+<style>
+		
+		section {
+			margin-bottom: 40px;
+		}
+	</style>
+
+<body>
+
+  <div class="menu">
+    <h2 class="logo0">V</h2><span>A</span><h2 class="logo1">T</h2>
+    <ul>
+      <li><a href="pg3-1.html">Inicio</a></li>
+      <li>
+          <a href="proble.html">Problemas <i class="fas fa-caret-down"></i> </a>
+          <div class="tpm_menu">
+              <ul>
+                <a href="proble.html #bullying">Bullying</a>
+                <a href="proble.html #trastornos-alimenticios">Trastornos alimenticios</a>
+                <a href="proble.html #drogas">Drogas</a><br>
+                <a href="proble.html #ansiedad">Ansiedad</a><br>
+                <a href="proble.html #estres">Estrés</a> <br>
+                <a href="proble.html #presion-escolar">Presión escolar</a> <br>
+                <a href="proble.html #problemas-familiares">Problemas familiares</a>
+              </ul>
+          </div>
+      </li>
+      <li><a href="API.html">Atención Psicologica</a></li>
+      <li><a href="gracias.html">Empresas Relaciónadas</a></li>
+      <li><a href="g-e.html">Contenido Multimedia</a></li>
+      <li><a href="#" id="contact-link">Contactanos</a>
+            </li>
+    </ul>
+   
+
+      <div id="contact-container" class="hidden">
+        <div id="contact-box">
+          <span class="close-button">&times;</span>
+          <form method="post" action="enviar_correo.php">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      
+      
+      <script>
+        const contactLink = document.querySelector('#contact-link');
+        const contactContainer = document.querySelector('#contact-container');
+      
+        contactLink.addEventListener('click', (event) => {
+          event.preventDefault();
+          contactContainer.classList.remove('hidden');
+        });
+      
+        const closeButton = document.createElement('span');
+        closeButton.classList.add('close-button');
+        closeButton.innerHTML = '&times;';
+        document.querySelector('#contact-box').appendChild(closeButton);
+      
+        closeButton.addEventListener('click', () => {
+          contactContainer.classList.add('hidden');
+        });
+      
+        const contactForm = document.querySelector('#contact-box form');
+      
+        contactForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const email = contactForm.elements.email.value;
+          const message = contactForm.elements.message.value;
+          const data = { email, message };
+      
+          fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log('Chingon pa:', data);
+              alert('Chingon pa');
+              contactContainer.classList.add('hidden');
+            })
+            .catch((error) => console.error('Error:', error));
+        });
+      </script>
+      
+      <style>
+       .close-button {
+position: absolute;
+top: 0;
+right: 0;
+padding: 0.5rem;
+font-size: 1.5rem;
+cursor: pointer;
+}
+#contact-box {
+position: relative;
+}
+
+
+      </style>
+      </div>
+
+      <a href="sign-in.html"><button type="button">Registrate</button></a>
+</div>
+</div>
+
+	<div class="unocontainer">
+		<section id="bullying"><br><br></br>
+			<h2>Bullying</h2><br>
+			<p>El bullying, también conocido como acoso escolar, es un problema grave y preocupante que afecta a millones de estudiantes en todo el mundo. Se define como una forma de comportamiento agresivo e intencional que se repite con el tiempo y que involucra a una o más personas que están en una posición de poder sobre la víctima. <br><br> El bullying puede tomar muchas formas diferentes, incluyendo agresiones verbales, físicas, psicológicas y sociales. Estas formas de acoso pueden ser muy dañinas para la víctima, causando efectos negativos en su salud mental y física, así como en su rendimiento académico y su calidad de vida en general.
+
+              <br><br>  El bullying es un problema común en las escuelas de todo el mundo, afectando a estudiantes de todas las edades, géneros y orígenes étnicos. A menudo, el acoso escolar comienza en la escuela primaria y continúa en la escuela secundaria y más allá. Los estudios han demostrado que los estudiantes que son objeto de acoso escolar tienen más probabilidades de sufrir problemas de salud mental, como depresión, ansiedad y trastornos de estrés postraumático, así como de sufrir efectos negativos a largo plazo en su vida adulta.
+                
+              <br><br>  Una de las principales causas del acoso escolar es la falta de empatía y compasión por los demás. <br> Los estudiantes que acosan a otros a menudo carecen de habilidades sociales y emocionales, y pueden tener problemas de autoestima o sentirse inseguros en sí mismos. El acoso escolar también puede ser una forma de reforzar la jerarquía social y la cultura de la violencia en la escuela, lo que puede hacer que los estudiantes sientan que necesitan acosar a otros para ganar respeto y aceptación.
+                
+             <br><br>   Es importante que los educadores, padres y estudiantes trabajen juntos para prevenir y abordar el acoso escolar. Las escuelas deben tener políticas y procedimientos claros para tratar el acoso escolar y proporcionar apoyo emocional y de salud mental a las víctimas y a los estudiantes que acosan a otros. Los padres también deben ser conscientes de los signos del acoso escolar y trabajar con las escuelas para ayudar a sus hijos a prevenirlo y abordarlo.
+                
+               <br><br> En conclusión, el bullying es un problema grave y preocupante que afecta a millones de estudiantes en todo el mundo. Es importante que se tomen medidas para prevenir y abordar el acoso escolar, incluyendo la educación de los estudiantes sobre cómo tratar a los demás con empatía y respeto, y la implementación de políticas y procedimientos claros para tratar el acoso escolar. Con el trabajo conjunto de los educadores, padres y estudiantes, podemos crear un ambiente escolar seguro y saludable para todos.</p>
+		</section>
+<br><br><br>
+		<section id="trastornos-alimenticios">
+			<h2>Trastornos alimenticios</h2> <br>
+			<p>Los trastornos alimenticios en los jóvenes estudiantes son un tema preocupante en la sociedad actual. Los trastornos alimenticios son enfermedades psicológicas que se caracterizan por una alteración en la percepción del peso y la figura corporal, lo que puede llevar a una obsesión por la alimentación, el control del peso y la forma física. Los trastornos alimenticios pueden tener graves consecuencias para la salud, incluyendo desnutrición, problemas gastrointestinales, depresión, ansiedad y otros trastornos mentales. <br><br>
+
+        Los jóvenes estudiantes son un grupo especialmente vulnerable a los trastornos alimenticios debido a la presión social y académica que enfrentan. Muchos estudiantes pueden sentirse presionados por los ideales de belleza inalcanzables que se presentan en los medios de comunicación y las redes sociales, lo que puede llevar a una autoimagen negativa y una baja autoestima. Además, el estrés académico y la presión por mantener un alto rendimiento académico pueden llevar a una preocupación excesiva por la alimentación y el control del peso. <br><br>
+        
+        Los trastornos alimenticios más comunes en los jóvenes estudiantes son la anorexia nerviosa, la bulimia nerviosa y el trastorno por atracón. La anorexia nerviosa se caracteriza por una obsesión por la delgadez y una restricción extrema de la ingesta de alimentos. La bulimia nerviosa se caracteriza por episodios de atracones de comida seguidos de purgas o vómitos. El trastorno por atracón se caracteriza por episodios recurrentes de atracones de comida sin purgas. <br><br>
+        
+        Es importante que los jóvenes estudiantes que padecen trastornos alimenticios busquen ayuda profesional. Los tratamientos incluyen terapia cognitivo-conductual, terapia interpersonal y terapia nutricional. La terapia cognitivo-conductual se centra en cambiar los patrones de pensamiento y comportamiento que contribuyen a los trastornos alimenticios. La terapia interpersonal se centra en mejorar las relaciones interpersonales del paciente. La terapia nutricional se centra en restablecer una alimentación saludable y equilibrada. <br><br>
+        
+        Además, es importante que los jóvenes estudiantes se sientan apoyados por su entorno social. Los amigos, familiares y profesionales de la salud pueden ayudar a los jóvenes a superar los trastornos alimenticios y recuperarse de ellos. También es importante que se fomente una cultura de aceptación y respeto hacia los diferentes tipos de cuerpo y se promueva una alimentación saludable y equilibrada. <br>
+        
+        En conclusión, los trastornos alimenticios en los jóvenes estudiantes son un problema grave que requiere atención y tratamiento. Los jóvenes estudiantes que padecen trastornos alimenticios necesitan apoyo profesional y de su entorno social para superarlos y recuperarse. La prevención de los trastornos alimenticios implica fomentar una cultura de aceptación y respeto hacia los diferentes tipos de cuerpo y promover una alimentación saludable y equilibrada.</p>
+		</section>
+
+		<section id="drogas"> <br><br>
+			<h2>Adicciones</h2> <br>
+      <p>La adicción a las drogas y al alcohol es un problema importante que afecta a muchos jóvenes estudiantes en todo el mundo. Las adicciones son un trastorno crónico que se caracteriza por el consumo repetitivo y compulsivo de una sustancia que causa daño a la salud física y mental del individuo. En este ensayo, se explorará la repercusión que estas adicciones tienen en la salud mental de los jóvenes estudiantes. <br><br>
+
+        Las adicciones a las drogas y al alcohol pueden tener un impacto significativo en la salud mental de los jóvenes estudiantes. Los jóvenes que abusan de estas sustancias son más propensos a experimentar síntomas de ansiedad y depresión, lo que puede llevar a problemas de salud mental a largo plazo. También pueden experimentar cambios en la personalidad, como la irritabilidad y la falta de motivación, que pueden afectar su capacidad para tener relaciones saludables y realizar actividades diarias. <br><br>
+        
+        Además, las adicciones a las drogas y al alcohol pueden afectar el desempeño académico de los jóvenes estudiantes. Estos pueden tener dificultades para concentrarse y memorizar información, lo que puede afectar su capacidad para aprobar exámenes y mantener un buen promedio. También pueden faltar a clases o tener dificultades para asistir a la escuela debido a los efectos de las sustancias que consumen. <br>
+        
+        Otro factor importante a considerar es la influencia de los amigos y el ambiente en el que los jóvenes estudiantes están inmersos. La presión de grupo y el acceso fácil a las drogas y al alcohol pueden llevar a los jóvenes a experimentar con estas sustancias y, eventualmente, desarrollar una adicción. Además, las adicciones pueden ser un síntoma de problemas emocionales subyacentes, como el estrés, la ansiedad y la depresión. <br><br>
+        
+        Es importante destacar que las adicciones a las drogas y al alcohol son trastornos tratables. Los jóvenes estudiantes que luchan contra estas adicciones pueden buscar ayuda a través de terapia y programas de rehabilitación. La ayuda profesional puede proporcionarles las herramientas necesarias para superar su adicción y evitar recaídas. También pueden encontrar apoyo en grupos de apoyo y programas de prevención de adicciones. <br><br>
+        
+        En conclusión, las adicciones a las drogas y al alcohol son un problema grave que afecta a muchos jóvenes estudiantes en todo el mundo. Estas adicciones pueden tener un impacto significativo en la salud mental de los jóvenes, así como en su rendimiento académico y en su vida social. Es importante que los jóvenes estudiantes reciban la ayuda necesaria para superar estas adicciones y evitar futuros problemas de salud mental y física.</p>
+</section>
+<section id="ansiedad"><br><br>
+<h2>Ansiedad</h2><br>
+<p>La ansiedad en jóvenes estudiantes es un tema de gran relevancia en la psicología debido a su frecuencia y consecuencias negativas en el rendimiento académico y la calidad de vida. Se trata de un trastorno emocional que se caracteriza por una sensación de miedo o angustia, acompañada de síntomas fisiológicos como sudoración, palpitaciones, respiración rápida y tensión muscular. <br><br>
+
+  En el contexto escolar, la ansiedad puede estar relacionada con el temor a no alcanzar las expectativas de los padres, maestros o compañeros, el exceso de tareas y responsabilidades, la presión por obtener buenas calificaciones y la falta de habilidades sociales para relacionarse con otros estudiantes. <br> <br>
+  
+  Desde una perspectiva psicológica, se considera que la ansiedad en jóvenes estudiantes puede ser tratada mediante terapia cognitivo-conductual, la cual se enfoca en identificar y modificar patrones de pensamiento y comportamiento que contribuyen a la ansiedad. Además, se pueden implementar técnicas de relajación, meditación y ejercicio físico para reducir los niveles de estrés y mejorar la salud mental.</p>
+</section>
+<section id="estres"><br><br>
+<h2>Estrés</h2><br>
+<p>El estrés es una respuesta natural del cuerpo ante situaciones que se perciben como amenazantes o desafiantes, y puede ser útil para motivarnos y prepararnos para enfrentarlas. Sin embargo, cuando el estrés se vuelve crónico o excesivo, puede tener consecuencias negativas en la salud física y mental. <br><br>
+
+  En el contexto estudiantil, el estrés puede estar relacionado con la carga académica, las expectativas de los padres y maestros, la competencia con otros estudiantes, la falta de tiempo para actividades de recreación y la presión por tomar decisiones importantes sobre el futuro. <br><br>
+  
+  Para manejar el estrés, se pueden implementar diversas estrategias desde una perspectiva psicológica, como la identificación y modificación de pensamientos negativos, la práctica de técnicas de relajación, la búsqueda de apoyo social y la gestión efectiva del tiempo. También es importante llevar un estilo de vida saludable, que incluya una alimentación balanceada, actividad física regular y suficiente descanso.</p>
+</section>
+
+<section id="presion-escolar"><br><br>
+  <h2>Presión Escolar</h2><br>
+  <p>La presión escolar es un problema común en muchos estudiantes, especialmente en aquellos que tienen altas expectativas académicas o enfrentan un ambiente competitivo en su entorno educativo. Esta presión puede manifestarse en forma de ansiedad, estrés, falta de motivación y pérdida de interés en el aprendizaje. <br><br>
+
+    Desde una perspectiva psicológica, la presión escolar puede abordarse mediante el desarrollo de habilidades para manejar el estrés y la ansiedad, como la práctica de técnicas de relajación, la identificación y modificación de pensamientos negativos, y la búsqueda de apoyo social. También es importante que los estudiantes aprendan a establecer metas realistas y manejar el fracaso y la frustración de manera saludable. <br><br>
+    
+    Además, es importante que padres y educadores brinden un ambiente de apoyo y aliento para los estudiantes, fomentando un enfoque en el proceso de aprendizaje y no solo en los resultados finales. Es necesario que se reconozca el esfuerzo y el progreso de los estudiantes, en lugar de solo enfocarse en las calificaciones y el rendimiento. También es importante que se les brinde la oportunidad de explorar y desarrollar sus intereses y habilidades individuales, lo que puede ayudarles a encontrar su propio camino y disminuir la presión que pueden sentir para seguir un camino específico.</p>
+</section>
+
+  <section id="problemas-familiares"><br><br>
+    <h2>Problemas Familiares</h2><br>
+    <p>Los problemas familiares o interfamiliares pueden tener un impacto significativo en la salud mental y emocional de los jóvenes estudiantes. Estos problemas pueden incluir conflictos entre padres, separaciones o divorcios, violencia doméstica, abuso de sustancias, problemas financieros y problemas de comunicación. <br><br>
+
+      Desde una perspectiva psicológica, es importante abordar estos problemas de manera temprana y efectiva para evitar que causen daños emocionales y de relación a largo plazo. En muchos casos, la terapia familiar puede ser útil para identificar y resolver problemas de comunicación y dinámicas disfuncionales en la familia. <br><br>
+      
+      Es importante que los padres y otros adultos significativos en la vida del estudiante brinden apoyo y comprensión durante momentos difíciles. También es importante que se involucren en la vida del estudiante y estén atentos a cualquier signo de angustia emocional, como cambios en el comportamiento o el estado de ánimo. <br><br>
+      
+      Además, es importante que se brinden recursos y apoyo emocional a los estudiantes para que puedan aprender a manejar y superar los desafíos que enfrentan en su vida familiar. Esto puede incluir terapia individual, grupos de apoyo, actividades extracurriculares y otras oportunidades para desarrollar habilidades y recursos emocionales.</p> <br><br>
+    </section>
+    <aside style="background-color:#f5f5f5; padding: 20px;">
+  <h2 style="color:#4d4d4d; font-size: 1.5rem; font-weight: bold;">Últimas noticias de la Secretaría de Salud sobre psicología</h2>
+  <ul style="list-style-type: none; padding: 0; margin: 0;">
+    <li style="margin-bottom: 10px;"><a href="#" style="color:#006699; text-decoration: none; font-size: 1.2rem;">Nuevo programa de atención psicológica gratuita para jóvenes</a></li>
+    <li style="margin-bottom: 10px;"><a href="#" style="color:#006699; text-decoration: none; font-size: 1.2rem;">Consejos para cuidar tu salud mental durante la pandemia</a></li>
+    <li style="margin-bottom: 10px;"><a href="#" style="color:#006699; text-decoration: none; font-size: 1.2rem;">Inauguración de centro de investigación en psicología clínica</a></li>
+    <li style="margin-bottom: 10px;"><a href="#" style="color:#006699; text-decoration: none; font-size: 1.2rem;">Charla virtual con expertos en psicología infantil</a></li>
+  </ul>
+</aside> 
+</div>
+
+<footer>
+  <div class="container2">
+      <div class="col-md-4">
+        <h4>Síguenos en redes sociales</h4>
+        <ul class="social-icons">
+          <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="text-muted text-center">© 2023 Todos los derechos reservados.</p>
+
+</footer>
+</body>
+</html>

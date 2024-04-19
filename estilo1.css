@@ -1,0 +1,105 @@
+body {
+    background-image: url(.//Imagenes/fondo.jpg);
+    font-family: 'Arya', sans-serif; /*----------------------------------------------------------------------*/
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #eeeeee;
+  }
+  
+  .box {
+    background-color: #cbf0c1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+          
+  
+}
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+  }
+  
+  input[type="text"],
+input[type="password"],
+input[type="email"] {
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #3c9923;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #003399;
+}
+
+.bottom {
+  margin-top: 20px;
+}
+
+a.back-button {
+  color: rgb(20, 20, 114);
+  cursor: pointer;
+  text-decoration: none;
+  max-height: 5px;
+}
+
+a.back-button:hover {
+  text-decoration: none;
+}
+
+
+
+/* Media queries para hacer el formulario responsive */
+@media screen and (max-width: 600px) {
+  .box {
+    max-width: 100%;
+  }
+  
+  input[type="text"],
+  input[type="password"]
+  input[type="email"] {
+    font-size: 14px;
+  }
+}
+#con-olv a:link {
+  margin-top: 5px;
+  color: rgb(20, 20, 114);
+  text-decoration: none;
+}
+
+#con-olv a:visited {
+  color: rgb(20, 20, 114);
+  text-decoration: none;
+}
+.box h1{
+  text-align: center;
+}

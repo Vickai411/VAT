@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href=".\IconVAT.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="estilos-1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		img {
+			width: 100%;
+			float: left;
+			height: 600px;
+			object-fit: cover;
+		}
+	</style>
+</head>
+<body>
+  <div class="menu">
+    <h2 class="logo0">V</h2><span>A</span><h2 class="logo1">T</h2>
+    <ul>
+      <li><a href="pg3-1.html">Inicio</a></li>
+      <li>
+          <a href="proble.html">Problemas <i class="fas fa-caret-down"></i> </a>
+          <div class="tpm_menu">
+              <ul>
+                <a href="proble.html #bullying">Bullying</a>
+                <a href="proble.html #trastornos-alimenticios">Trastornos alimenticios</a>
+                <a href="proble.html #drogas">Drogas</a><br>
+                <a href="proble.html #ansiedad">Ansiedad</a><br>
+                <a href="proble.html #estres">Estrés</a> <br>
+                <a href="proble.html #presion-escolar">Presión escolar</a> <br>
+                <a href="proble.html #problemas-familiares">Problemas familiares</a>
+              </ul>
+          </div>
+      </li>
+      <li><a href="API.html">Atención Psicologica</a></li>
+      <li><a href="gracias.html">Empresas Relaciónadas</a></li>
+      <li><a href="g-e.html">Contenido Multimedia</a></li>
+      <li><a href="#" id="contact-link">Contactanos</a>
+            </li>
+    </ul>
+   
+
+      <div id="contact-container" class="hidden">
+        <div id="contact-box">
+          <span class="close-button">&times;</span>
+          <form method="post" action="enviar_correo.php">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      
+      
+      <script>
+        const contactLink = document.querySelector('#contact-link');
+        const contactContainer = document.querySelector('#contact-container');
+      
+        contactLink.addEventListener('click', (event) => {
+          event.preventDefault();
+          contactContainer.classList.remove('hidden');
+        });
+      
+        const closeButton = document.createElement('span');
+        closeButton.classList.add('close-button');
+        closeButton.innerHTML = '&times;';
+        document.querySelector('#contact-box').appendChild(closeButton);
+      
+        closeButton.addEventListener('click', () => {
+          contactContainer.classList.add('hidden');
+        });
+      
+        const contactForm = document.querySelector('#contact-box form');
+      
+        contactForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const email = contactForm.elements.email.value;
+          const message = contactForm.elements.message.value;
+          const data = { email, message };
+      
+          fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log('Chingon pa:', data);
+              alert('Chingon pa');
+              contactContainer.classList.add('hidden');
+            })
+            .catch((error) => console.error('Error:', error));
+        });
+      </script>
+      
+      <style>
+       .close-button {
+position: absolute;
+top: 0;
+right: 0;
+padding: 0.5rem;
+font-size: 1.5rem;
+cursor: pointer;
+}
+#contact-box {
+position: relative;
+}
+
+
+      </style>
+      </div>
+
+      <a href="sign-in.html"><button type="button">Registrate</button></a>
+</div>
+</div>
+	<a href="https://cemepi.com.mx/"><img src="./Imagenes/CEMEPI.jfif" title="CEMEPI"></a>
+	<a href="https://www.programacionconductual.com.mx/"><img src="./Imagenes/prog-cond.jpg" title="Programación Conductual"></a>
+	<img src="imagen3.jpg">
+	<img src="imagen4.jpg">
+	<img src="imagen5.jpg">
+
+  <footer>
+    <div class="container2">
+        <div class="col-md-4">
+          <h4>Síguenos en redes sociales</h4>
+          <ul class="social-icons">
+            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p class="text-muted text-center">© 2023 Todos los derechos reservados.</p>
+  
+  </footer>
+
+</body>
+</html>
